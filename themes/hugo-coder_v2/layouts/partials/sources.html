@@ -1,0 +1,11 @@
+{{ if .Params.Sources }}
+  <h3 dir="{{ .Language.LanguageDirection }}">
+    {{ i18n "sources.sources" | default "Sources" }}
+  </h3>
+  <ul dir="ltr">
+  {{ range .Params.Sources }}
+    <li>
+      <a href="{{ .}}">{{ . }}</a>
+    </li>
+  {{ end }}
+{{ end }}
